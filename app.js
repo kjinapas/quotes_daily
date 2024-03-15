@@ -19,8 +19,9 @@ app.get('/',async (req,res,next)=>{
                'X-Api-Key': key_api
            }
        })
+       let  data = quotes_data.data[0]['quote']
       // console.log(quotes_data.data)
-       res.render('index',quotes_data)
+       res.render('index',{'data':data})
 
        
     }catch(err){
